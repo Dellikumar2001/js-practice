@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*types of selectors:
+ universal, id ,class, pseudo class and element selector, group selector*/
+        *{
+            box-sizing: border-box;
+        }
+        #title{
+            background-color: aqua;
+        }
+        .highlight-text{
+            font-size: 100px;
+            background-color:blueviolet
+        }
+        h1,div,span{
+            font-style: italic;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            padding-top: 50px; /* padding moves content of*/ 
+            padding-left: 30px;
+            border: 5px solid yellow;
+            border-radius: 30px;
+            margin-left: 40px;
+            margin-top: 30px;
+            box-shadow: 10px 10px 5px;/* position will be boottom, right, blur, color if we give value in - it will be top, left, blur, color*/
+            /*relative and absolute unit study*/
+        }
+
+    </style>
+</head>
+<body>
+    <div>one</div><div>two</div><div>three</div> <!--container, occurs entire content-->
+    <div>
+    <span>Youtube -</span><span>Video </span><span>For "Java"</span> <!-- occurs content space only-->
+    </div>
+    
+    <!--if we use div tag for this it will appear in next line-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gex-j7GlCHc?si=azZdFrY7Q3Fa9nlG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <!--inline , first trigger is inline then internal and external-->
+    <h1 style="color: brown;">hello</h1>
+    <!--* -universal, # id only unique, . class-->
+    <div id="box">
+        hiiii
+    </div>
+    <h2 id="title">hey</h2>
+    <h3 class="highlight-text">goog</h3>
+
+
+</body>
+</html>
