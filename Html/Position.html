@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: red;
+            position: static; /*default always static only */
+
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: yellow;
+            position: relative;/* moves from current position */
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+
+        }
+        #box3{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: black;
+            position: relative; /*default always static only*/
+            z-index: 2;
+
+        }
+        .one{
+            margin: 5px;
+            margin-left: 100px;
+            border: solid black 2px;
+            width: 200px;
+            height: 100px;
+        }
+        h1{
+            position: relative;
+            left: 20px;
+        }
+        .two{
+            margin-left: 100px;
+            border: solid black 2px;
+            width: 200px;
+            height: 100px;
+            position: relative;
+            
+        }
+        h2{
+            position: absolute;/* moves from screen edge,
+            so control absolute we have to parent class as relative and
+             if parent(class="two") - becomes static means i won't move inside the box*/
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+    </div>
+    <div id="box2">
+    </div>
+    <div id="box3">
+    </div>
+    <!--next absolute-->
+    <div class="one">
+        <h1>hello</h1>
+    </div>
+    <div class="two">
+        <h2>hey</h2>
+    </div>
+</body>
+</html>
+<!--static, relative in current position move ,absloute  white space(parent) position move , 
+fixed - white space(parent) position move but when content move upwards but this box will be fixed, sticky -->
